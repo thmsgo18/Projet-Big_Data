@@ -12,3 +12,8 @@ Faire un shazam maison. Le but du projet est de créer un shazam, où a partir d
 
 
 ## Lien intéressant :
+
+1. Kaggle : https://www.kaggle.com
+2. Free Music Archive: https://freemusicarchive.org
+3. Recherche : https://dblp.org & https://dblp.uni-trier.de/search/publ
+4. Apache spark : https://spark.apache.org
