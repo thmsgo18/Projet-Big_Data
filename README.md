@@ -39,6 +39,53 @@ Faire un shazam maison. Le but du projet est de créer un shazam, où a partir d
     # Cette commande permet de mettre à jour les librairies nécessaires pour éxecuter le code du projet.
 ```
 
+## Structure du projet
+
+```
+shazam-maison/
+├── README.md                  # Présentation du projet, comment lancer
+├── requirements.txt           # Dépendances Python
+├── .gitignore
+
+├── data/                      # Les données du projet
+│   ├── raw/                   # Audios bruts (les datasets téléchargés)
+│   ├── processed/             # Audios nettoyés / segments
+│   ├── features/              # Descripteurs / empreintes / embeddings
+│   └── index/                 # Fichiers de la base vectorielle
+
+├── src/
+│   ├── __init__.py
+│   ├── config.py              # Chemins de fichiers, hyperparamètres simples
+
+│   ├── data_utils/            # Gestion des données
+│   │   ├── __init__.py
+
+│   ├── audio/                 # Tout ce qui touche au signal audio
+│   │   ├── __init__.py
+│   │   ├── loading.py         # Chargement audio, resampling, mono, etc.
+│   │   └── preprocessing.py   # Normalisation, découpe en fenêtres, etc.
+
+│   ├── features/              # Représentations numériques de l’audio
+│   │   ├── __init__.py
+
+│   ├── index/                 # Base de données vectorielle
+│   │   ├── __init__.py
+│   │   └── build_index.py     # Script pour construire et mettre à jour l’index
+
+│   ├── retrieval/             # Pipeline pour répondre à une requête
+│   │   ├── __init__.py
+
+│   └── api/                   # Interface simple pour tester le Shazam
+│       ├── __init__.py
+│       └── app.py             # Petitte API pour envoyer un audio et recevoir le résultat
+
+├── scripts/                   # Scripts à lancer depuis le terminal
+
+└── tests/                     # Pour les tests
+    ├── __init__.py
+
+```
+
 ## Lien intéressant
 
 1. Kaggle: <https://www.kaggle.com>
