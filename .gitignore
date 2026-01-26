@@ -13,7 +13,7 @@ ENV/
 *.h5
 *.hdf5
 *.parquet
-data/
+data/*
 datasets/
 
 # IDE

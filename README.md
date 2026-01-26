@@ -29,6 +29,16 @@ Faire un shazam maison. Le but du projet est de créer un shazam, où a partir d
     pip install -r requirements.txt
 ```
 
+## Ajout d'une librairie
+
+1. On utilise pip pour installer la librairie qu'on souhaite (Il faut bien vérifier qu'on se situe dans le venv).
+2. Puis on fait la commande :
+
+```bash
+    pip freeze > requirements.txt
+    # Cette commande permet de mettre à jour les librairies nécessaires pour éxecuter le code du projet.
+```
+
 ## Lien intéressant
 
 1. Kaggle: <https://www.kaggle.com>
