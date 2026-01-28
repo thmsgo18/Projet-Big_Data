@@ -72,7 +72,7 @@ Faire un shazam maison. Le but du projet est de créer un shazam, où a partir d
 ## Structure du projet
 
 ```bash
-shazam-maison/
+shazam/
 ├── README.md                  # Présentation du projet, comment lancer
 ├── requirements.txt           # Dépendances Python
 ├── .gitignore
