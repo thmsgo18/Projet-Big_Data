@@ -18,7 +18,7 @@ Faire un shazam maison. Le but du projet est de créer un shazam, où a partir d
 
 ### Thomas
 
-1. 
+1. [An Industrial-Strength Audio Search Algorithm](research_paper/thomas/)
 
 ### Vincent
 
