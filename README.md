@@ -10,7 +10,21 @@ Faire un shazam maison. Le but du projet est de créer un shazam, où a partir d
 2. Faire le projet.
 3. Faire un rapport.
 
-## Comment démarrer le projet
+## Articles de recherche
+
+### Clara
+
+### Maria
+
+### Thomas
+
+1. 
+
+### Vincent
+
+## Premiers pas
+
+### Comment démarrer le projet
 
 1. Importer le projet sur sa machine.
 2. Créer un venv :
@@ -29,7 +43,7 @@ Faire un shazam maison. Le but du projet est de créer un shazam, où a partir d
     pip install -r requirements.txt
 ```
 
-## Ajout d'une librairie
+### Ajout d'une librairie
 
 1. On utilise pip pour installer la librairie qu'on souhaite (Il faut bien vérifier qu'on se situe dans le venv).
 2. Puis on fait la commande :
