@@ -12,15 +12,31 @@ Faire un shazam maison. Le but du projet est de créer un shazam, où a partir d
 
 ## Articles de recherche
 
-### Clara
-
-### Maria
-
 ### Thomas
 
-1. [An Industrial-Strength Audio Search Algorithm](research_paper/thomas/)
+1. [An Industrial-Strength Audio Search Algorithm](research_paper/thomas/Wang03-shazam.pdf)
 
-### Vincent
+    Cet article présente un algorithme de reconnaissance audio, développé par Avery Li-Chun Wang (Shazam).
+
+    L’objectif est d’identifier un morceau de musique à partir d’un court extrait sonore (quelques secondes), même lorsque celui-ci est fortement dégradé : bruit ambiant, voix superposées, distorsions, compression GSM ou coupures réseau.
+
+    L’article propose une méthode de fingerprinting audio basée sur l’extraction de pics fréquentiels, appelés *constellations*. Ces points caractéristiques sont ensuite combinés par paires pour former des hashs temporels discriminants. L’algorithme identifie les morceaux en détectant des alignements temporels cohérents entre l’extrait audio et les pistes de la base de données.
+
+2. [Cross modal audio search and retrieval with joint embeddings based on text and audio](research_paper/thomas/Audio%20search%20and%20retrieval%20-%20Microsoft.pdf)
+
+    Cet article traite de la recherche et de la récupération audio multimodales, en combinant texte et audio.
+
+    Les chercheurs s’attaquent ici à une des limites des moteurs de recherche audio : soit les moteurs comparent texte-texte (via des métadonnées), soit audio-audio (par similarité acoustique), sans interaction entre les deux.
+
+    Les auteurs proposent un embedding conjoint audio-texte à l’aide d’un réseau de neurones siamois (Siamese Neural Network). Ce réseau projette des caractéristiques audio et textuelles dans un même espace, où la similarité sémantique et acoustique peut être mesurée directement.
+
+3. [A fast audio similarity retrieval method for millions of music tracks](research_paper/thomas/A%20fast%20audio%20similarity%20retrieval%20method.pdf)
+
+    Cet article parle du problème de la recherche rapide de similarité audio dans des bases de données musicales de très grande taille (plusieurs millions de morceaux).
+
+    Le problème est que les méthodes de similarité audio les plus performantes reposent sur des modèles complexes (par exemple les modèles de timbre gaussiens), qui sont très coûteux à calculer et donc difficiles à appliquer sur de gros datasets.
+
+    Les auteurs proposent une méthode filter-and-refine qui porte sur une adaptation de l’algorithme FastMap. L’idée est de projeter les morceaux de musique dans un espace vectoriel de plus faible dimension, afin d’effectuer une pré-sélection rapide des candidats les plus proches grâce à une distance euclidienne, puis d'améliorer les résultats avec la mesure exacte (divergence de Kullback–Leibler symétrisée).
 
 ## Premiers pas
 
@@ -29,33 +45,33 @@ Faire un shazam maison. Le but du projet est de créer un shazam, où a partir d
 1. Importer le projet sur sa machine.
 2. Créer un venv :
 
-```bash
-    python3 -m venv venv
-    # Activation du venv
-    source venv/bin/activate
-    # Vérification de l'activation du venv
-    which python
-```
+    ```bash
+        python3 -m venv venv
+        # Activation du venv
+        source venv/bin/activate
+        # Vérification de l'activation du venv
+        which python
+    ```
 
 3. Installer les librairies necessaires pour l'éxécution du projet :
 
-```bash
-    pip install -r requirements.txt
-```
+    ```bash
+        pip install -r requirements.txt
+    ```
 
 ### Ajout d'une librairie
 
 1. On utilise pip pour installer la librairie qu'on souhaite (Il faut bien vérifier qu'on se situe dans le venv).
 2. Puis on fait la commande :
 
-```bash
-    pip freeze > requirements.txt
-    # Cette commande permet de mettre à jour les librairies nécessaires pour éxecuter le code du projet.
-```
+    ```bash
+        pip freeze > requirements.txt
+        # Cette commande permet de mettre à jour les librairies nécessaires pour éxecuter le code du projet.
+    ```
 
 ## Structure du projet
 
-```
+```bash
 shazam-maison/
 ├── README.md                  # Présentation du projet, comment lancer
 ├── requirements.txt           # Dépendances Python
