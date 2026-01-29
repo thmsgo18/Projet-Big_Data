@@ -4,6 +4,10 @@
 
 Faire un shazam maison. Le but du projet est de créer un shazam, où a partir d'un fichier audio, on doit retrouver la musique la plus proche grace à une base de donnée vectorielle de musiques.
 
+## Notes pratiques
+
+1. Le fingerprinting audio est une technique qui permet d'identifier un son ou un morceau de musique à partir d'un extrait de mauvaise qualité. L'idée est que au lieu de comparer tout le fichier audio, on extrait une signature unique (comme une empreinte d'où le nom du principe).
+
 ## À faire
 
 1. trois articles de recherche à trouver et à lire par personne.
