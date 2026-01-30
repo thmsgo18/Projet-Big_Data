@@ -69,6 +69,15 @@ Faire un shazam maison. Le but du projet est de créer un shazam, où a partir d
 
     PDX peut optimiser le calcul de distance lors de la recherche de l'extrait audio dans une base d'embeddings. PDX-BOND pourrait prioriser les dimensions les plus discriminantes pour éliminer rapidement les morceaux non-correspondants sans parcourir toutes les dimensions.
 
+3. [MuQ: Self-Supervised Music Representation Learning with Mel Residual Vector Quantization](MuQ_music_vector.pdf)
+
+    Cet article présente MuQ, un modèle d'apprentissage auto-supervisé pour la représentation musicale, développé par Haina Zhu, Yizhi Zhou et leurs collaborateurs (Shanghai Jiao Tong University, Nanjing University, Tencent AI Lab).
+
+    L'objectif est de créer des représentations audio universelles capables de capturer simultanément les informations sémantiques (genre, émotion) et acoustiques (mélodie, tonalité, timbre) de la musique, pour améliorer les performances sur les tâches de music information retrieval (MIR) comme le tagging, la classification d'instruments ou la détection de tonalité.
+
+    L'article propose Mel-RVQ (Mel Residual Vector Quantization), un tokenizer léger qui quantifie directement le spectrogramme Mel via une projection linéaire résiduelle. Le modèle MuQ utilise une architecture Conformer (12 couches, 310M paramètres) entraînée par masked language modeling à prédire ces tokens multi-résiduels. Un entraînement itératif raffine les représentations en réentraînant Mel-RVQ sur les latents de MuQ.
+    
+
 
 
 ## Premiers pas
